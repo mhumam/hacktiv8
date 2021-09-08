@@ -1,0 +1,42 @@
+h2 {
+  margin-bottom: 0.5em;
+}
+.navbar {
+  padding: 0.5rem 1rem;
+  box-shadow: rgb(240, 241, 242) 0px 2px 8px;
+  background-color: rgb(24, 144, 255);
+  color: #f0f0f0;
+}
+.navbar .navbar-brand {
+  color: #f0f0f0;
+}
+.navbar .nav-link {
+  color: #f0f0f0;
+}
+
+section {
+  padding: 1rem 2rem;
+}
+.card {
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+a {
+  text-decoration: none;
+  color: #1890ff;
+}
+.btn-primary {
+  background-color: #1890ff;
+}
+
+.card-header {
+  min-height: 48px;
+  margin-bottom: -1px;
+  color: #000000d9;
+  font-weight: 500;
+  font-size: 16px;
+  background: 0 0;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 2px 2px 0 0;
+  padding: 16px 24px;
+}
