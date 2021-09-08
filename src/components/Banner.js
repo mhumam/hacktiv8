@@ -1,10 +1,10 @@
 import {
-    Button,
     Card,
     CardTitle,
     CardText,
     CardImg
 } from 'reactstrap';
+import Button from './Atoms/Button';
 
 const App = () => {
     return (

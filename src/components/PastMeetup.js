@@ -3,9 +3,9 @@ import {
     CardText,
     CardBody,
     CardTitle,
-    Button,
     CardHeader
 } from 'reactstrap';
+import Button from './Atoms/Button';
 
 const PastMeetupCard = ({ title, date, total }) => {
     return (
