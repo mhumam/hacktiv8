@@ -5,8 +5,7 @@ import {
     NavbarToggler,
     NavbarBrand,
     Nav,
-    NavItem,
-    NavLink
+    NavItem
 } from 'reactstrap';
 import { Link } from "react-router-dom";
 import Foto from '../../assets/images/photo.jpg';
@@ -19,7 +18,6 @@ const Navigation = () => {
         <div>
             <Navbar className="bg-primary navbar-dark" expand="md" id="sideNav">
                 <NavbarBrand href="/">
-                    {/* <img src="https://startbootstrap.github.io/startbootstrap-resume/assets/img/profile.jpg" alt="Logo" className="img-fluid img-profile rounded-circle mx-auto mb-2" /> */}
                     <img src={Foto} alt="Logo" className="img-fluid img-profile rounded-circle mx-auto mb-2" />
                 </NavbarBrand>
                 <NavbarToggler onClick={toggle} />

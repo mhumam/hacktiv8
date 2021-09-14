@@ -1,6 +1,8 @@
 import React from 'react'
 
-const InterestsPage = () => {
+const InterestsPage = (props) => {
+    document.title = props.title
+    
     return (
         <section className="resume-section" id="interest">
             <div className="resume-section-content">

@@ -1,6 +1,10 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedinIn, faGithubAlt, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
-function AboutPage() {
+const AboutPage = (props) => {
+    document.title = props.title
+
     return (
         <section className="resume-section">
             <div className="resume-section-content">
@@ -11,10 +15,18 @@ function AboutPage() {
                 </div>
                 <p className="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
                 <div className="social-icons">
-                    <a className="social-icon" href="#!"><i className="fab fa-linkedin-in"></i></a>
-                    <a className="social-icon" href="#!"><i className="fab fa-github"></i></a>
-                    <a className="social-icon" href="#!"><i className="fab fa-twitter"></i></a>
-                    <a className="social-icon" href="#!"><i className="fab fa-facebook-f"></i></a>
+                    <a className="social-icon" href="#!">
+                        <FontAwesomeIcon icon={faLinkedinIn} />
+                    </a>
+                    <a className="social-icon" href="#!">
+                        <FontAwesomeIcon icon={faGithubAlt} />
+                    </a>
+                    <a className="social-icon" href="#!">
+                        <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                    <a className="social-icon" href="#!">
+                        <FontAwesomeIcon icon={faFacebook} />
+                    </a>
                 </div>
             </div>
         </section>

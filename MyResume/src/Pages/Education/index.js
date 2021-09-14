@@ -14,7 +14,9 @@ const EducationCard = ({ university, title, fieldOfStudy, Gpa, period }) => {
     )
 }
 
-const Education = () => {
+const Education = (props) => {
+    document.title = props.title
+    
     const dataList = [
         {
             university: 'Dian Nuswantory University',

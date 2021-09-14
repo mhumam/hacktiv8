@@ -13,7 +13,9 @@ const ExperienceCard = ({ positions, company, jobDesc, period }) => {
     )
 }
 
-const Experience = () => {
+const Experience = (props) => {
+    document.title = props.title
+    
     const dataList = [
         {
             positions: 'Frontend Engineer',
