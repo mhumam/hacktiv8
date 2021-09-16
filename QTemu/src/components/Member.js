@@ -9,7 +9,7 @@ import {
 const Member = () => {
     return (
         <section>
-            <div class="d-flex flex-row justify-content-between">
+            <div className="d-flex flex-row justify-content-between">
                 <h2>Members</h2>
                 <a href="/#">See All</a>
             </div>

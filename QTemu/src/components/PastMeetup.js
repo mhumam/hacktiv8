@@ -33,14 +33,14 @@ const data = [
 const App = () => {
     return (
         <section className="row mt-3">
-            <div class="d-flex flex-row justify-content-between">
+            <div className="d-flex flex-row justify-content-between">
                 <h2>Past Meetups</h2>
                 <a href="/#">See All</a>
             </div>
-            <div class="d-flex flex-sm-row flex-column">
+            <div className="d-flex flex-sm-row flex-column">
                 {
-                    data?.map(obj => {
-                        return <PastMeetupCard {...obj} />
+                    data?.map((obj, key) => {
+                        return <PastMeetupCard key={key} {...obj} />
                     })
                 }
             </div>
