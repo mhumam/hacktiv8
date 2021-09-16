@@ -40,3 +40,10 @@ a {
   border-radius: 2px 2px 0 0;
   padding: 16px 24px;
 }
+
+.vert-offset-top-0{
+  margin-top: 0em;
+}
+.vert-offset-top-2{
+  margin-top: 2em;
+}
