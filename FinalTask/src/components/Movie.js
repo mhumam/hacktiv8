@@ -24,7 +24,7 @@ const style = {
     p: 4,
 };
 
-const MovieCard = ({ title, image, ...props }) => {
+const MovieCard = ({ title, year, image, ...props }) => {
     return (
         <>
             <Card sx={{ maxWidth: 345 }} {...props}>
@@ -33,6 +33,7 @@ const MovieCard = ({ title, image, ...props }) => {
                     <Typography gutterBottom variant="h5" component="div">
                         {title}
                     </Typography>
+                    <Typography variant="body2" color="text.secondary">{year}</Typography>
                 </CardContent>
             </Card>
         </>
