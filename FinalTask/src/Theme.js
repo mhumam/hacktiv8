@@ -19,15 +19,15 @@ export const CustomTheme = createTheme({
         MuiCard: {
             styleOverrides: {
                 root: {
-                    height: "100%"
+                    height: "100%",
+                    cursor: 'pointer'
                 },
             },
         },
         MuiCardMedia: {
             styleOverrides: {
                 root: {
-                    height: '30rem',
-                    cursor: 'pointer'
+                    height: '30rem'
                 }
             }
         }

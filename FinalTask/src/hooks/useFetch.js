@@ -24,7 +24,7 @@ function reducer(state, action) {
     }
 }
 
-export const useFetch = (url, defaultParams) => {
+export const useFetch = (url, defaultParams = {}) => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const [params, setParams] = useState(defaultParams)
 
