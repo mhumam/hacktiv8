@@ -1,18 +1,19 @@
 import React from 'react'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
 
 const MovieCard = ({ title, year, image }) => {
     return (
-        <div className="movie-item">
-            <div className="movie-item__header">
-                <img className="movie-item__header__poster" alt={title} src={image} />
-                <div className="movie-item__header__rating">
-                    <p>⭐️<span className="movie-item__header__rating__score">{year}</span></p>
-                </div>
-            </div>
-            <div className="movie-item__content">
-                <h3>{title}</h3>
-            </div>
-        </div>
+        <Card sx={{ maxWidth: 345 }}>
+            <CardMedia component="img" image={image} alt={title} />
+            <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                    {title}
+                </Typography>
+            </CardContent>
+        </Card>
     )
 }
 

@@ -1,20 +1,28 @@
 import React from 'react'
 import SearchForm from './Search'
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 
-const Header = ({ onSearch }) => {
+const Header = ({ setParams }) => {
     return (
-        <header className="app-bar">
-            <div className="app-bar__menu">
-                <button id="hamburgerButton">☰</button>
-            </div>
-            <div className="app-bar__brand">
-                <h1>Movie Catalogue</h1>
-            </div>
-            <nav id="navigationDrawer" className="app-bar__navigation">
-                <SearchForm onSearch={onSearch} />
-            </nav>
-        </header>
-    )
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+                <Toolbar>
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="div"
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                    >
+                        FinProH8
+                    </Typography>
+                    <SearchForm setParams={setParams} />
+                </Toolbar>
+            </AppBar>
+        </Box>
+    );
 }
 
 export default Header
