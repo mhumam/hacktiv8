@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-const MovieCard = ({ title, year, image }) => {
+const MovieCard = ({ title, image }) => {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia component="img" image={image} alt={title} />

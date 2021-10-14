@@ -18,6 +18,7 @@ const Search = styled('div')(({ theme }) => ({
         width: 'auto',
     },
 }));
+
 const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -61,11 +62,7 @@ const SearchForm = ({ setParams }) => {
             <SearchIconWrapper>
                 <SearchIcon />
             </SearchIconWrapper>
-            <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ 'aria-label': 'search' }}
-                onChange={handleChange}
-            />
+            <StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} onChange={handleChange} />
         </Search>
     )
 }

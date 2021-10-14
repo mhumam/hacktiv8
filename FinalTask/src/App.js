@@ -1,3 +1,5 @@
+import { ThemeProvider } from '@mui/material/styles';
+import { CustomTheme } from 'Theme';
 import Header from 'components/Header';
 import MovieCard from 'components/Movie';
 import CardSkeleton from 'components/CardSkeleton';
@@ -9,46 +11,46 @@ import Grid from '@mui/material/Grid';
 
 const Div = styled('div')(({ theme }) => ({
     ...theme.typography.button,
-    backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(1),
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: '2rem'
 }));
 
 function App() {
     const defaultSearch = 'man';
 
+    /* for fetching data */
     const { data, isLoading, params, setParams } = useFetch(
         'https://www.omdbapi.com',
-        { apiKey: '65525897', s: defaultSearch }
+        { apiKey: '7acdd46', s: defaultSearch }
     )
 
+    /* for handle on search in header */
     const handleOnSearch = (value) => {
         setParams({ ...params, s: value ? value : defaultSearch })
     }
 
     return (
-        <>
-            <Header setParams={handleOnSearch} />
-            <main id="mainContent">
-                <Container maxWidth="xl">
-                    <Typography mt={2} mb={2} variant="h4" component="div" gutterBottom>
-                        Show your favorite movies
-                    </Typography>
-                    <Grid container spacing={2}>
-                        {
-                            isLoading ? Array.from(new Array(5))?.map(() => <Grid item xs={3}><CardSkeleton /></Grid>)
-                                : data?.Search ? data?.Search?.map(obj => {
-                                    return (
-                                        <Grid item xs={3}>
-                                            <MovieCard title={obj?.Title} year={obj?.Year} image={obj?.Poster} />
-                                        </Grid>
-                                    )
-                                }) : <Grid item xs={12}><Div>{"Data Not Found"}</Div></Grid>
-                        }
-                    </Grid>
-                </Container>
-            </main>
-        </>
+        <ThemeProvider theme={CustomTheme}>
+            <Header title="Movie Catalogue" setParams={handleOnSearch} />
+            <Container maxWidth="xl">
+                <Typography mt={4} mb={4} variant="h4" component="div" gutterBottom>
+                    Show your favorite movies
+                </Typography>
+                <Grid container spacing={2}>
+                    {
+                        isLoading ? Array.from(new Array(8))?.map(() => <Grid item xs={3}><CardSkeleton /></Grid>)
+                            : data?.Search ? data?.Search?.map(obj => {
+                                return (
+                                    <Grid item md={3}>
+                                        <MovieCard title={obj?.Title} year={obj?.Year} image={obj?.Poster} />
+                                    </Grid>
+                                )
+                            }) : <Grid item xs={12}><Div>{"Movie Not Found"}</Div></Grid>
+                    }
+                </Grid>
+            </Container>
+        </ThemeProvider>
     );
 }
 
